@@ -8,40 +8,88 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.bgimg-1 {
-  position: relative;
-  background-color: #7eaf9c;
-  background-image: url("logo.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  min-height: 100%;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-.w3-large { 
-    position: relative;
-}
-
-.icon-size {
-    font-size: 30px; /* Adjust the size as needed */
-  }
-
-
-</style>
-</head>
-<body>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+      overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
+    }
+    
+    /* Full height image header */
+    .bgimg-1 {
+      position: relative;
+      background-color: #7eaf9c;
+      background-image: url("logo.jpeg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 70%;
+      min-height: 100%;
+      padding-bottom: 50px; /* Increase the padding at the bottom to avoid content overlapping with the fixed navbar */
+    }
+    
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    
+    .w3-large { 
+        position: relative;
+    }
+    
+    .icon-size {
+        font-size: 30px; /* Adjust the size as needed */
+    }
+    
+    .w3-sidebar {
+      z-index: 3; /* Ensure sidebar stays on top of content */
+      position: fixed;
+      width: 250px;
+      overflow: auto;
+      height: 100%;
+      left: 0;
+      background-color: #111;
+      color: #fff;
+      padding-top: 20px;
+    }
+    
+    .w3-sidebar a {
+      padding: 10px;
+      font-weight: bold;
+    }
+    
+    /* Page content */
+    .w3-main {
+      margin-left: 250px; /* Same as the width of the sidebar */
+      padding-left: 20px;
+      padding-right: 20px;
+      overflow: auto;
+    }
+    
+    @media (max-width: 992px) {
+      .w3-sidebar {
+        width: 200px;
+      }
+    
+      .w3-main {
+        margin-left: 200px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .w3-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    
+      .w3-main {
+        margin-left: 0;
+      }
+    }
+    
+    </style>
+    </head>
+    <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
