@@ -67,25 +67,28 @@
         height: auto;
       }
     }
+  .w3-bar-item:hover {
+    background-color:  #ffffff;
+    color: #000;
+  }
+  .w3-bar-item {
+    transition: background-color 0.8s, color 0.8s; /* Add transition for smooth animation */
+  }
   </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="logo.jpeg" width=24px height=24px></a></img>
+  <div class="w3-bar w3-white w3-card w3-gradient-navbar" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="logo.jpeg" width="24px" height="24px"></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Product Gallery</a>
-     <!-- <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-      -->
+      <a href="#about" class="w3-bar-item w3-button" id="about-link"><i class="fa fa-info-circle"></i> About</a>
+      <a href="#team" class="w3-bar-item w3-button" id="team-link"><i class="fa fa-users"></i> Team</a>
+      <a href="#work" class="w3-bar-item w3-button" id="prod-link"><i class="fa fa-th"></i> Product Gallery</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
@@ -95,12 +98,23 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> About</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> Team</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Product Gallery</a>
 </nav>
+
+<script>
+  // Smooth scrolling behavior
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
@@ -438,6 +452,22 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+var currentUrl = window.location.href;
+
+  // Get the navigation links
+  var aboutLink = document.getElementById("about-link");
+  var teamLink = document.getElementById("team-link");
+  var prodLink = document.getElementById("prod-link");
+
+  // Check if the current URL matches the link URLs and add the "active" class
+  if (currentUrl.includes("#about")) {
+    aboutLink.classList.add("active");
+  } else if (currentUrl.includes("#team")) {
+    teamLink.classList.add("active");
+  } else if (currentUrl.includes("#work")) {
+    prodLink.classList.add("active");
+  }
 </script>
 
 </body>
