@@ -75,16 +75,21 @@
     transition: background-color 0.8s, color 0.8s; /* Add transition for smooth animation */
   }
   </style>
-  <!-- Mobile-specific code -->
-  <style>
-    @media (max-width: 767px) {
-      .w3-large {
-        /* Mobile-specific styles */
-        text-align: center;
-        padding: 2% 4%;
-      }
+  <!--Mobile-specific-->
+ <style>
+  @media (max-width: 767px) {
+    .w3-large {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+      background-color: #f5f5f5;
     }
-  </style>
+  }
+</style>
 
 <!-- Desktop-specific code -->
 <style>
