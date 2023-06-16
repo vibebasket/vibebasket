@@ -75,10 +75,10 @@
     transition: background-color 0.8s, color 0.8s; /* Add transition for smooth animation */
   }
   </style>
-  <!--Mobile-specific-->
- <style>
+  <!-- Mobile-specific code -->
+<style>
   @media (max-width: 767px) {
-    .w3-large {
+    .mobile-paragraph {
       /* Mobile-specific styles */
       text-align: center;
       position: fixed;
@@ -94,7 +94,7 @@
 <!-- Desktop-specific code -->
 <style>
   @media (min-width: 768px) {
-    .w3-largetext {
+    .desktop-paragraph {
       /* Desktop-specific styles */
       position: absolute;
       bottom: 2%;
@@ -104,6 +104,8 @@
       text-align: center;
     }
   }
+</style>
+
 </style>
 </head>
 <body>
@@ -158,7 +160,8 @@
       <i class="fa fa-twitter w3-hover-opacity icon-size"></i>
       <a href="https://www.linkedin.com/company/vibe-basket/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
     </div>
-<p class="w3-largetext">A chat-bot to modernize the way you plan group outings. Simpler logistics, hyper-personalization, and much more!</p>
+<!-- HTML code -->
+<p class="desktop-paragraph mobile-paragraph">A chat-bot to modernize the way you plan group outings. Simpler logistics, hyper-personalization, and much more!</p>
 
     
   </div>
