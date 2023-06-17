@@ -26,21 +26,22 @@
 
     /* Full height image header */
     .bgimg-1 {
-    position: relative;
-    background-color: #7eaf9c;
-    background-image: url("logo.jpeg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 70%;
-    min-height: 100vh; /* Adjust the minimum height to cover the entire viewport */
-  }
+  position: relative;
+  background-color: #7eaf9c;
+  background-image: url("logo.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  min-height: 100vh; /* Adjust the minimum height to cover the entire viewport */
+}
 
-  @media (max-width: 767px) {
-    .bgimg-1 {
-      background-size: cover; /* Change the background size to cover the viewport */
-      background-size: 30%; /* Change the background size to a smaller percentage */
-    }
+@media (max-width: 767px) {
+  .bgimg-1 {
+    background-size: 30%; /* Change the background size to a smaller percentage */
+    background-position: center; /* Center the background image */
   }
+}
+
 
     .w3-bar .w3-button {
       padding: 16px;
