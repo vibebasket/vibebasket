@@ -3,7 +3,7 @@
 <head>
   <title>VibeBasket</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -92,8 +92,9 @@
   </style>
  <!-- Mobile-specific code -->
 <style>
-  @media (max-width: 767px) {
-    .mobile-paragraph {
+  @media all and (min-width:960px) and (max-width: 1024px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
       /* Mobile-specific styles */
       text-align: center;
       position: fixed;
@@ -102,7 +103,86 @@
       width: 100%;
       padding: 2% 4%;
     }
-  }
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+  /* put your css styles in here */
+  .mobile-paragraph {
+      /* Mobile-specific styles */
+      text-align: center;
+      position: fixed;
+      bottom: 25%;
+      left: 0;
+      width: 100%;
+      padding: 2% 4%;
+    }
+}
+
 </style>
 
 <!-- Desktop-specific code -->
@@ -182,8 +262,6 @@
     
   </div>
 </header>
-
-
 
 
 
@@ -276,7 +354,7 @@
 <!-- Team Section -->
 <div class="w3-container" style="padding: 128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who run this company</p>
+  <p class="w3-center w3-large">The Vibe Curators!</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top: 64px;">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card team-member-card">
