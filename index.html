@@ -25,7 +25,7 @@
     }
 
     /* Full height image header */
-    .bgimg-1 {
+       .bgimg-1 {
   position: relative;
   background-color: #7eaf9c;
   background-image: url("logo.jpeg");
@@ -37,8 +37,14 @@
 
 @media (max-width: 767px) {
   .bgimg-1 {
-    background-size: 30%; /* Change the background size to a smaller percentage */
+    background-size: 20%; /* Change the background size to a smaller percentage */
     background-position: center; /* Center the background image */
+  }
+}
+@media (max-width: 480px) {
+  /* Styles for smaller mobile devices */
+  .bgimg-1 {
+    background-size: 20%; /* Change the background size to a smaller percentage */
   }
 }
 
