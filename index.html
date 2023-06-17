@@ -28,12 +28,13 @@
     background-size: 70%;
     min-height: 100vh; /* Adjust the minimum height to cover the entire viewport */
   }
-  @media (max-width: 480px) {
-  /* Styles for smaller mobile devices */
-  .bgimg-1 {
-      background-size: cover; /* Change the background size to cover the viewport */
+
+  @media (max-width: 767px) {
+    .bgimg-1 {
+      background-size: 40%; /* Change the background size to a smaller percentage */
     }
-}
+  }
+
 
   @media (max-width: 767px) {
     .bgimg-1 {
@@ -87,14 +88,14 @@
     transition: background-color 0.8s, color 0.8s; /* Add transition for smooth animation */
   }
   </style>
-  <!-- Mobile-specific code -->
+ <!-- Mobile-specific code -->
 <style>
   @media (max-width: 767px) {
     .mobile-paragraph {
       /* Mobile-specific styles */
       text-align: center;
       position: fixed;
-      bottom: 0;
+      bottom: 15%;
       left: 0;
       width: 100%;
       padding: 2% 4%;
@@ -108,7 +109,7 @@
     .desktop-paragraph {
       /* Desktop-specific styles */
       position: absolute;
-      bottom: 2%;
+      bottom: 10%;
       left: 50%;
       transform: translateX(-50%);
       padding: 2% 4%;
@@ -116,6 +117,7 @@
     }
   }
 </style>
+
 
 </style>
 </head>
